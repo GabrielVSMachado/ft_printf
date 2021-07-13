@@ -7,9 +7,11 @@
 #  define RETURN_NULL "0x0"
 # endif
 
-#include "./libft/libft.h"
+# include <stdarg.h>
+# include "./libft/libft.h"
 
 int		ft_printf(const char *format, ...);
 char	*ft_conversion_p(void *param);
+char	*ft_flag_minus(char *str, int value);
 
 #endif
