@@ -12,6 +12,6 @@
 
 int		ft_printf(const char *format, ...);
 char	*ft_conversion_p(void *param);
-char	*ft_flag_minus(char *str, int value);
+void	ft_flag_minus(char **str, int value);
 
 #endif
