@@ -14,6 +14,7 @@ int		ft_printf(const char *format, ...);
 char	*ft_conversion_p(void *param);
 char	*ft_conversion_s(char *param);
 char	*ft_conversion_c(int c);
-void	ft_flag_minus(char **str, int value);
+void	ft_flag_minus(char **str, int width);
+void	ft_flag_zero(char **str, int width);
 
 #endif

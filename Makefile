@@ -3,7 +3,8 @@ NAME = libftprintf.a
 FUNC_LST = 	ft_flag_minus.c \
 			ft_conversion_p.c \
 			ft_conversion_s.c \
-			ft_conversion_c.c
+			ft_conversion_c.c \
+			ft_flag_zero.c
 LIBFT = ./libft/libft.a
 CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
