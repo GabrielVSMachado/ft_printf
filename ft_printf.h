@@ -16,6 +16,7 @@ char	*ft_conversion_s(char *param);
 char	*ft_conversion_c(int c);
 char	*ft_conversion_d_i(int d);
 char	*ft_conversion_u(unsigned int u);
+char	*ft_conversion_x(unsigned int x);
 void	ft_flag_minus(char **str, int width);
 void	ft_flag_zero(char **str, int width);
 

@@ -6,6 +6,7 @@ FUNC_LST = 	ft_conversion_p.c \
 			ft_conversion_c.c \
 			ft_conversion_d_i.c \
 			ft_conversion_u.c \
+			ft_conversion_x.c \
 			ft_flag_minus.c \
 			ft_flag_zero.c
 
