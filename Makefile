@@ -1,14 +1,15 @@
 .PHONY: all clean fclean re
 NAME = libftprintf.a
-SRC = 	ft_flag_minus.c \
-		ft_conversion_p.c \
-		ft_conversion_s.c
+FUNC_LST = 	ft_flag_minus.c \
+			ft_conversion_p.c \
+			ft_conversion_s.c \
+			ft_conversion_c.c
 LIBFT = ./libft/libft.a
 CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 CC = clang
 SRCDIR = ./utils_ftprintf
-SRCS = $(addprefix $(SRCDIR)/,$(SRC)) 
+SRCS = $(addprefix $(SRCDIR)/,$(FUNC_LST)) 
 OBJS = ${SRCS:$(SRCDIR)/%.c=$(SRCDIR)/%.o}
 all: $(NAME)
 
