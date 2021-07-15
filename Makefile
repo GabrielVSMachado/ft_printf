@@ -5,12 +5,13 @@ FUNC_LST = 	ft_conversion_p.c \
 			ft_conversion_s.c \
 			ft_conversion_c.c \
 			ft_conversion_d_i.c \
+			ft_conversion_u.c \
 			ft_flag_minus.c \
 			ft_flag_zero.c
 
 
 LIBFT = ./libft/libft.a
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -g -Wall -Wextra -Werror
 AR = ar rcs
 CC = clang
 SRCDIR = ./utils_ftprintf
