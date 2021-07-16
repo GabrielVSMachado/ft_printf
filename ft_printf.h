@@ -10,7 +10,7 @@
 # include <stdarg.h>
 # include "./libft/libft.h"
 
-typedef struct s_convesion
+typedef struct s_conversion
 {
 	int		minus;
 	int		zero;
@@ -27,7 +27,7 @@ int		ft_printf(const char *format, ...);
 char	*ft_conversion_p(void *param);
 char	*ft_conversion_s(char *param);
 char	*ft_conversion_c(int c);
-char	*ft_conversion_d_i(int d);
+char	*ft_conversion_d_i(unsigned int d);
 char	*ft_conversion_u(unsigned int u);
 char	*ft_conversion_x(unsigned int x);
 char	*ft_conversion_X(unsigned int x);
