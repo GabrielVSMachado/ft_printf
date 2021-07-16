@@ -10,6 +10,19 @@
 # include <stdarg.h>
 # include "./libft/libft.h"
 
+typedef struct s_convesion
+{
+	int		minus;
+	int		zero;
+	int		hashtag;
+	int		space;
+	int		plus;
+	int		width;
+	int		precision;
+	char	conversion;
+	char	*str;
+}				t_conv;
+
 int		ft_printf(const char *format, ...);
 char	*ft_conversion_p(void *param);
 char	*ft_conversion_s(char *param);
@@ -20,5 +33,6 @@ char	*ft_conversion_x(unsigned int x);
 char	*ft_conversion_X(unsigned int x);
 void	ft_flag_minus(char **str, int width);
 void	ft_flag_zero(char **str, int width);
+void	ft_precision(t_conv *conv);
 
 #endif

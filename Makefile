@@ -9,7 +9,8 @@ FUNC_LST = 	ft_conversion_p.c \
 			ft_conversion_x.c \
 			ft_conversion_X.c \
 			ft_flag_minus.c \
-			ft_flag_zero.c
+			ft_flag_zero.c \
+			ft_precision.c
 
 
 LIBFT = ./libft/libft.a
