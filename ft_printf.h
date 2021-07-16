@@ -19,6 +19,7 @@ typedef struct s_conversion
 	int		plus;
 	int		width;
 	int		precision;
+	int		negative;
 	char	conversion;
 	char	*str;
 }				t_conv;
