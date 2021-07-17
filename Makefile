@@ -4,8 +4,7 @@ NAME = libftprintf.a
 FUNC_LST = 	ft_conversion_p.c \
 			ft_conversion_s.c \
 			ft_conversion_c.c \
-			ft_conversion_d_i.c \
-			ft_conversion_u.c \
+			ft_conversion_d_i_u.c \
 			ft_conversion_x.c \
 			ft_conversion_X.c \
 			ft_flag_minus.c \
