@@ -34,6 +34,7 @@ char	*ft_conversion_X(unsigned int x);
 void	ft_flag_minus(char **str, int width);
 void	ft_flag_zero(char **str, int width);
 void	ft_flag_hashtag(t_conv *param);
+void	ft_flag_plus(t_conv *param);
 void	ft_precision(t_conv *conv);
 
 #endif

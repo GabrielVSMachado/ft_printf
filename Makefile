@@ -10,6 +10,7 @@ FUNC_LST = 	ft_conversion_p.c \
 			ft_flag_hashtag.c \
 			ft_flag_minus.c \
 			ft_flag_zero.c \
+			ft_flag_plus.c \
 			ft_precision.c
 
 
