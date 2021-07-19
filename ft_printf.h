@@ -17,7 +17,7 @@ typedef struct s_conversion
 int		ft_printf(const char *format, ...);
 void	get_conversion(t_conv *param, va_list ap);
 void	get_flags(t_conv *param);
-void	check_flags_conversion(t_conv *param, char *format);
+void	check_flags_conversion(t_conv *param, char **format);
 char	*ft_conversion_p(void *param);
 char	*ft_conversion_s(char *param);
 char	*ft_conversion_c(int c, size_t *len);
