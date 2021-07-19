@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 13:55:03 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/19 16:31:34 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/19 17:07:31 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,17 @@
 static int	isconversion(int c);
 static void	initializer_struct(t_conv *param);
 
-void	check_flags_conversion(t_conv *param, char *format_p)
+void	check_flags_conversion(t_conv *param, char **format_p)
 {
 	initializer_struct(param);
-	while (!isconversion(*format_p))
+	(*format_p)++;
+	while (!isconversion(**format_p))
 	{
-		if (*format_p == '#')
+		if (**format_p == '#')
 			param->hashtag = TRUE;
-		format_p++;
+		(*format_p)++;
 	}
-	param->conversion = *format_p;
+	param->conversion = **format_p;
 }
 
 static int	isconversion(int c)
