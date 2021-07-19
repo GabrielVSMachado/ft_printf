@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/18 16:31:14 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/18 21:06:48 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/18 23:38:48 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,10 @@ void	get_conversion(t_conv *param, va_list ap)
 	else if (param->conversion == 's')
 		param->str = ft_conversion_s(va_arg(ap, char *));
 	else if (param->conversion == 'c')
-		param->str = ft_conversion_c(va_arg(ap, int));
+		param->str = ft_conversion_c(va_arg(ap, int), &(param->len));
 	else if (param->conversion == 'p')
 		param->str = ft_conversion_p(va_arg(ap, void *));
 	else if (param->conversion == '%')
 		param->str = ft_strdup("%");
+	param->len += ft_strlen(param->str);
 }
