@@ -4,23 +4,20 @@ NAME = libftprintf.a
 FUNC_LST = 	ft_conversion_p.c \
 			ft_conversion_s.c \
 			ft_conversion_c.c \
-			ft_conversion_d_i_u.c \
+			ft_conversion_d_i.c \
+			ft_conversion_u.c \
 			ft_conversion_x.c \
 			ft_conversion_X.c \
-			ft_flag_hashtag.c \
-			ft_flag_minus.c \
-			ft_flag_zero.c \
-			ft_flag_plus.c \
-			ft_precision.c
-
+			get_conversion.c \
+			ft_printf.c
 
 LIBFT = ./libft/libft.a
 CFLAGS = -g -Wall -Wextra -Werror
 AR = ar rcs
 CC = clang
 SRCDIR = ./utils_ftprintf
-SRCS = $(addprefix $(SRCDIR)/,$(FUNC_LST)) 
-OBJS = ${SRCS:$(SRCDIR)/%.c=$(SRCDIR)/%.o}
+SRCS = $(addprefix $(SRCDIR)/,$(FUNC_LST))
+OBJS = ${SRCS:%.c=%.o}
 
 
 all: $(NAME)
