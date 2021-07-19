@@ -12,6 +12,7 @@ typedef struct s_conversion
 	char	*str;
 	size_t	len;
 	int		hashtag;
+	int		space;
 }				t_conv;
 
 int		ft_printf(const char *format, ...);
@@ -26,5 +27,6 @@ char	*ft_conversion_u(unsigned int u);
 char	*ft_conversion_x(unsigned int x);
 char	*ft_conversion_X(unsigned int x);
 void	ft_flag_hashtag(t_conv *param);
+void	ft_flag_space(t_conv *param);
 
 #endif
