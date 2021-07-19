@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 22:11:52 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/14 22:12:03 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/18 22:21:16 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ char	*ft_conversion_p(void *param)
 		free(tmp);
 		return (str);
 	}
-	return (ft_strdup(RETURN_NULL));
+	return (ft_strdup("0x0"));
 }
