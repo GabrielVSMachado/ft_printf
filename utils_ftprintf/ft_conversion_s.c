@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/14 18:11:34 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/14 22:11:28 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/18 22:20:50 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,12 @@ char	*ft_conversion_s(char *param)
 {
 	char	*str;
 
-	str = ft_strdup(param);
-	if (!str)
-		return (NULL);
-	return (str);
+	if (param != NULL)
+	{
+		str = ft_strdup(param);
+		if (!str)
+			return (NULL);
+		return (str);
+	}
+	return (ft_strdup("(null)"));
 }
