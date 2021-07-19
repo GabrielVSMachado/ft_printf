@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/18 17:09:13 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/19 13:10:25 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/19 14:24:43 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_printf(const char *format, ...)
 	{
 		if (*format_p == '%')
 		{
-			conv_handler.conversion = *(++format_p);
+			check_flags_conversion(&conv_handler, (++format_p));
 			get_conversion(&conv_handler, ap);
 			ft_putstr2_fd(conv_handler.str, 1);
 			free(conv_handler.str);
