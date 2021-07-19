@@ -7,7 +7,7 @@ FUNC_LST = 	ft_conversion_p.c \
 			ft_conversion_d_i.c \
 			ft_conversion_u.c \
 			ft_conversion_x.c \
-			ft_conversion_X.c \
+			ft_conversion_upper_x.c \
 			get_flags.c		\
 			get_conversion.c \
 			check_flags_conversion.c \
