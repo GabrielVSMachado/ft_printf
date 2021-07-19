@@ -8,6 +8,8 @@ FUNC_LST = 	ft_conversion_p.c \
 			ft_conversion_u.c \
 			ft_conversion_x.c \
 			ft_conversion_X.c \
+			ft_flag_hashtag.c \
+			get_flags.c		\
 			get_conversion.c \
 			ft_printf.c
 
