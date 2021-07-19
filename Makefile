@@ -11,6 +11,7 @@ FUNC_LST = 	ft_conversion_p.c \
 			ft_flag_hashtag.c \
 			get_flags.c		\
 			get_conversion.c \
+			check_flags_conversion.c \
 			ft_printf.c
 
 LIBFT = ./libft/libft.a
