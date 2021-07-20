@@ -6,12 +6,12 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 13:55:03 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/20 16:50:45 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/20 17:10:27 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
-static int	isconversion(int c);
+static int	isflag(int c);
 static void	initializer_struct(t_conv *param);
 static int	get_number(char **format_p);
 
@@ -19,7 +19,7 @@ void	check_flags_conversion(t_conv *param, char **format_p)
 {
 	initializer_struct(param);
 	(*format_p)++;
-	while (!isconversion(**format_p) && !ft_isdigit(**format_p))
+	while (isflag(**format_p))
 	{
 		if (**format_p == '#')
 			param->hashtag = TRUE;
@@ -35,9 +35,9 @@ void	check_flags_conversion(t_conv *param, char **format_p)
 	param->conversion = **format_p;
 }
 
-static int	isconversion(int c)
+static int	isflag(int c)
 {
-	if (ft_strchr("cspiudxX%", c))
+	if (ft_strchr("0+ #", c))
 		return (1);
 	return (0);
 }
