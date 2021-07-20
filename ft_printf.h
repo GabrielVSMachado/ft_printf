@@ -1,7 +1,7 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 # define TRUE 1
-# define FALSE 0
+# define FALSE -1
 
 # include <stdarg.h>
 # include "./libft/libft.h"
@@ -11,9 +11,13 @@ typedef struct s_conversion
 	char	conversion;
 	char	*str;
 	size_t	len;
+	size_t	len_str;
+	int		width;
 	int		hashtag;
 	int		space;
 	int		plus;
+	int		zero;
+	int		minus;
 }				t_conv;
 
 int		ft_printf(const char *format, ...);
@@ -30,5 +34,6 @@ char	*ft_conversion_X(unsigned int x);
 void	ft_flag_hashtag(t_conv *param);
 void	ft_flag_space(t_conv *param);
 void	ft_flag_plus(t_conv *param);
+void	ft_flag_zero(t_conv *param);
 
 #endif
