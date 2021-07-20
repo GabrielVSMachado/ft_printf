@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 13:48:16 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/20 18:15:49 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/20 18:24:49 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_flag_zero(t_conv *param)
 {
 	char	c;
-	size_t	len;
+	int		len;
 	char	*tmp;
 
 	c = param->conversion;
