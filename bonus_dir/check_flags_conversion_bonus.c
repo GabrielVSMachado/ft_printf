@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 13:55:03 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/20 15:54:41 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/20 16:50:45 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	check_flags_conversion(t_conv *param, char **format_p)
 {
 	initializer_struct(param);
 	(*format_p)++;
-	while (!isconversion(**format_p))
+	while (!isconversion(**format_p) && !ft_isdigit(**format_p))
 	{
 		if (**format_p == '#')
 			param->hashtag = TRUE;
