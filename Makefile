@@ -14,7 +14,8 @@ FUNC_LST = 	ft_conversion_p.c \
 			ft_printf.c
 
 FUNC_BONUS_LST = ft_flag_hashtag.c \
-				 ft_flag_space.c 
+				 ft_flag_space.c \
+				 ft_flag_plus.c
 LIBFT = ./libft/libft.a
 CFLAGS = -g -Wall -Wextra -Werror
 AR = ar rcs
