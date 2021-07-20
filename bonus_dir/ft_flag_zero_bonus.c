@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 13:48:16 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/20 16:29:34 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/20 18:15:49 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,12 @@ void	ft_flag_zero(t_conv *param)
 			tmp = ft_strdup(&(param->str[1]));
 			free(param->str);
 			param->str = tmp;
-			tmp = ft_calloc(len + param->len_str + 1, 1);
+			tmp = ft_memset(malloc(len + param->len_str + 1), '0', len);
 			tmp[0] = '-';
-			ft_strlcat(tmp, param->str, len + param->len_str + 1);
 		}
 		else
-		{
-			tmp = ft_calloc(len + param->len_str + 1, 1);
-			ft_strlcat(tmp, param->str, len + param->len_str + 1);
-		}
+			tmp = ft_memset(malloc(len + param->len_str + 1), '0', len);
+		ft_strlcat(tmp, param->str, len + param->len_str + 1);
 		free(param->str);
 		param->str = tmp;
 		param->len_str += len;
