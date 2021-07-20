@@ -8,16 +8,17 @@ FUNC_LST = 	ft_conversion_p.c \
 			ft_conversion_u.c \
 			ft_conversion_x.c \
 			ft_conversion_upper_x.c \
-			get_flags.c		\
 			get_conversion.c \
-			check_flags_conversion.c \
 			ft_printf.c
 
-FUNC_BONUS_LST = ft_flag_hashtag.c \
-				 ft_flag_space.c \
-				 ft_flag_plus.c
+FUNC_BONUS_LST = ft_flag_hashtag_bonus.c \
+				 ft_flag_space_bonus.c \
+				 get_conversion_bonus.c \
+				 get_flags_bonus.c \
+				 ft_flag_plus_bonus.c \
+				 ft_printf_bonus.c
 LIBFT = ./libft/libft.a
-CFLAGS = -g -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 CC = clang
 SRCDIR = ./utils_ftprintf
