@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_flags.c                                        :+:      :+:    :+:   */
+/*   get_flags_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 13:37:00 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/19 23:45:59 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/20 15:18:18 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,7 @@ void	get_flags(t_conv *param)
 	if (param->plus == TRUE && (c == 'd' || c == 'i')
 		&& ft_atoi(param->str) >= 0)
 		ft_flag_plus(param);
+	if ((c != 's' && c != 'c' && c != '%') && param->zero == TRUE
+		&& param->minus == FALSE)
+		ft_flag_zero(param);
 }
