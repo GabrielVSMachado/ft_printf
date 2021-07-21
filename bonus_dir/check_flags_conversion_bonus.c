@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 13:55:03 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/20 17:10:27 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/21 03:30:39 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ void	check_flags_conversion(t_conv *param, char **format_p)
 			param->plus = TRUE;
 		else if (**format_p == '0')
 			param->zero = TRUE;
+		else if (**format_p == '-')
+			param->minus = TRUE;
 		(*format_p)++;
 	}
 	param->width = get_number(format_p);
