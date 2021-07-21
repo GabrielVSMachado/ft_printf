@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 13:55:03 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/21 03:30:39 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/21 03:54:58 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	check_flags_conversion(t_conv *param, char **format_p)
 
 static int	isflag(int c)
 {
-	if (ft_strchr("0+ #", c))
+	if (ft_strchr("0+ #-", c))
 		return (1);
 	return (0);
 }
