@@ -17,7 +17,7 @@ FUNC_COMUM_LST = ft_conversion_c.c \
 				 ft_conversion_d_i.c \
 				 ft_conversion_p.c \
 				 ft_conversion_s.c \
-				 ft_conversion_x \
+				 ft_conversion_x.c \
 				 ft_conversion_u.c \
 				 ft_conversion_upper_x.c
 
