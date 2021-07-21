@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_flag_space.c                                    :+:      :+:    :+:   */
+/*   ft_flag_space_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 19:56:16 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/19 20:03:49 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/21 04:21:03 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,6 @@ void	ft_flag_space(t_conv *param)
 
 	tmp = param->str;
 	param->str = ft_strjoin(" ", param->str);
+	param->len_str += 1;
 	free(tmp);
 }
