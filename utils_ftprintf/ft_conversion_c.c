@@ -6,13 +6,13 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/15 00:27:49 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/19 13:11:15 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/21 04:06:45 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-char	*ft_conversion_c(int c, size_t	*len)
+char	*ft_conversion_c(int c, t_conv *param)
 {
 	char	*str;
 
@@ -20,7 +20,8 @@ char	*ft_conversion_c(int c, size_t	*len)
 	if (c == 0)
 	{
 		write(1, "\0", 1);
-		*len += 1;
+		if (param->minus == FALSE)
+			param->len += 1;
 	}
 	else
 	{
