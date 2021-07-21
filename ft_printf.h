@@ -26,7 +26,7 @@ void	get_flags(t_conv *param);
 void	check_flags_conversion(t_conv *param, char **format);
 char	*ft_conversion_p(void *param);
 char	*ft_conversion_s(char *param);
-char	*ft_conversion_c(int c, size_t *len);
+char	*ft_conversion_c(int c, t_conv *param);
 char	*ft_conversion_d_i(int d);
 char	*ft_conversion_u(unsigned int u);
 char	*ft_conversion_x(unsigned int x);
