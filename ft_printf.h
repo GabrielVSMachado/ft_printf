@@ -35,5 +35,6 @@ void	ft_flag_hashtag(t_conv *param);
 void	ft_flag_space(t_conv *param);
 void	ft_flag_plus(t_conv *param);
 void	ft_flag_zero(t_conv *param);
+void	ft_flag_minus(t_conv *param);
 
 #endif
