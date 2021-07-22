@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 13:37:00 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/22 19:22:59 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/22 19:40:32 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	get_flags(t_conv *param)
 	char	c;
 
 	c = param->conversion;
-	if (param->precision >= 0 && (c != 'c' || c != '%'))
+	if (param->precision >= 0 && !(c == 'c' || c == '%'))
 		ft_precision(param);
 	if (param->hashtag == TRUE && (c == 'x' || c == 'X')
 		&& ft_strncmp(param->str, "0", 1))
