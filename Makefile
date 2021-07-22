@@ -11,6 +11,7 @@ FUNC_BONUS_LST = ft_flag_hashtag_bonus.c \
 				 ft_flag_plus_bonus.c \
 				 ft_flag_zero_bonus.c \
 				 ft_flag_minus_bonus.c \
+				 ft_precision_bonus.c \
 				 check_flags_conversion_bonus.c \
 				 ft_printf_bonus.c
 
