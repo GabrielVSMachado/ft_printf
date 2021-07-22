@@ -12,6 +12,7 @@ typedef struct s_conversion
 	char	*str;
 	size_t	len;
 	size_t	len_str;
+	int		precision;
 	int		width;
 	int		hashtag;
 	int		space;
@@ -34,7 +35,8 @@ char	*ft_conversion_X(unsigned int x);
 void	ft_flag_hashtag(t_conv *param);
 void	ft_flag_space(t_conv *param);
 void	ft_flag_plus(t_conv *param);
-void	ft_flag_zero(t_conv *param);
+void	ft_flag_zero(char c, int width, size_t *len_str, char **str);
 void	ft_flag_minus(t_conv *param);
+void	ft_precision(t_conv *param);
 
 #endif
