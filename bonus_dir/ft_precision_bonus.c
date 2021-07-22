@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/22 18:17:17 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/22 18:58:01 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/22 19:27:21 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_precision(t_conv *param)
 
 	if (param->conversion == 's')
 	{
-		if (param->len_str > param->precision)
+		if (param->len_str > (unsigned int)param->precision)
 		{
 			tmp = param->str;
 			param->str = ft_substr(param->str, 0, param->precision);
