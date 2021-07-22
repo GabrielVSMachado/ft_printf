@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 13:55:03 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/21 03:54:58 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/22 19:10:21 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,11 @@ void	check_flags_conversion(t_conv *param, char **format_p)
 		(*format_p)++;
 	}
 	param->width = get_number(format_p);
+	if (**format_p == '.')
+	{
+		(*format_p)++;
+		param->precision = get_number(format_p);
+	}
 	param->conversion = **format_p;
 }
 
@@ -52,6 +57,7 @@ static void	initializer_struct(t_conv *param)
 	param->plus = FALSE;
 	param->zero = FALSE;
 	param->minus = FALSE;
+	param->precision = -1;
 	param->width = -1;
 	param->len_str = 0;
 	param->str = NULL;
