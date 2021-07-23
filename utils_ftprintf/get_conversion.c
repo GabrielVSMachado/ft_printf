@@ -6,14 +6,16 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/18 16:31:14 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/23 15:00:57 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/23 15:09:52 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
+static void	initializer_struct(t_conv *param);
 
 void	get_conversion(t_conv *param, va_list ap)
 {
+	initializer_struct(param);
 	if (param->conversion == 'd' || param->conversion == 'i')
 		param->str = ft_conversion_d_i(va_arg(ap, int));
 	else if (param->conversion == 'u')
@@ -33,4 +35,18 @@ void	get_conversion(t_conv *param, va_list ap)
 	if (param->conversion != 'c')
 		param->len_str += ft_strlen(param->str);
 	param->len += param->len_str;
+}
+
+static void	initializer_struct(t_conv *param)
+{
+	param->conversion = FALSE;
+	param->hashtag = FALSE;
+	param->space = FALSE;
+	param->plus = FALSE;
+	param->zero = FALSE;
+	param->minus = FALSE;
+	param->precision = -1;
+	param->width = -1;
+	param->len_str = 0;
+	param->str = NULL;
 }
