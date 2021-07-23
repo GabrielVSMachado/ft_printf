@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/22 18:17:17 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/22 22:36:03 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/22 23:15:14 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,8 @@
 void	ft_precision(t_conv *param)
 {
 	char	*tmp;
-	char	c;
 
-	c = param->conversion;
-	if ((c == 'd' || c == 'i') && param->str[0] == '-')
-		param->len_str--;
-	if (c == 's')
+	if (param->conversion == 's')
 	{
 		if (param->len_str > (unsigned int)param->precision)
 		{
@@ -29,8 +25,19 @@ void	ft_precision(t_conv *param)
 			free(tmp);
 		}
 	}
+	else if (param->str[0] == '-' && param->len_str--)
+	{
+		tmp = param->str;
+		param->str = ft_strdup(&(param->str[1]));
+		ft_flag_zero(param->conversion, param->precision,
+			&(param->len_str), &(param->str));
+		free(tmp);
+		tmp = param->str;
+		param->str = ft_strjoin("-", param->str);
+		free(tmp);
+	}
 	else
-		ft_flag_zero(c, param->precision,
+		ft_flag_zero(param->conversion, param->precision,
 			&(param->len_str), &(param->str));
 	param->len_str = ft_strlen(param->str);
 }
