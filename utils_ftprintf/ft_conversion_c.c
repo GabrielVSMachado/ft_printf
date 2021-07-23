@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/15 00:27:49 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/21 04:06:45 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/23 01:57:03 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ char	*ft_conversion_c(int c, t_conv *param)
 	if (c == 0)
 	{
 		write(1, "\0", 1);
-		if (param->minus == FALSE)
-			param->len += 1;
+		param->len += 1;
 	}
 	else
 	{
