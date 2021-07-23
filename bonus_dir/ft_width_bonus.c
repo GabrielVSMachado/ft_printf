@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/23 00:31:57 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/23 00:43:13 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/23 01:03:35 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ void	ft_width(t_conv *param)
 		ft_strlcat(tmp, param->str, len + param->len_str + 1);
 		free(param->str);
 		param->str = tmp;
+		param->len_str += len;
 	}
 }
