@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 13:48:16 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/22 18:58:10 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/22 22:11:45 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_flag_zero(char conversion, int width, size_t *len_str, char **str)
 	{
 		if ((c == 'i' || c == 'd') && *str[0] == '-')
 		{
-			tmp = ft_strdup(&(*str[1]));
+			tmp = ft_strdup((*str + 1));
 			free(*str);
 			*str = tmp;
 			tmp = ft_memset(ft_calloc(len + *len_str + 1, 1),
