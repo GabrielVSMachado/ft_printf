@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/19 13:37:00 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/23 00:21:21 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/23 00:50:34 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	get_flags(t_conv *param)
 		&& ft_atoi(param->str) >= 0)
 		ft_flag_plus(param);
 	if ((c != 's' && c != 'c') && param->zero == TRUE
-		&& param->minus == FALSE)
+		&& param->minus == FALSE && param->precision != -1)
 		ft_flag_zero(c, param->width, &(param->len_str), &(param->str));
 	if (param->minus == TRUE)
 		ft_flag_minus(param);
