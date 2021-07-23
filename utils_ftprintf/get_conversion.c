@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/18 16:31:14 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/23 14:52:37 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/23 15:00:57 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ void	get_conversion(t_conv *param, va_list ap)
 	else if (param->conversion == '%')
 		param->str = ft_strdup("%");
 	if (param->conversion != 'c')
-		param->len += ft_strlen(param->str);
+		param->len_str += ft_strlen(param->str);
+	param->len += param->len_str;
 }
