@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/22 18:17:17 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/22 22:33:14 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/22 22:36:03 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_precision(t_conv *param)
 	char	c;
 
 	c = param->conversion;
-	if ((c == 'd' || c == 'i') && param->str[1] == '-')
+	if ((c == 'd' || c == 'i') && param->str[0] == '-')
 		param->len_str--;
 	if (c == 's')
 	{
