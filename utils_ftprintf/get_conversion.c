@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/18 16:31:14 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/23 15:09:52 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/23 15:24:51 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,14 +39,13 @@ void	get_conversion(t_conv *param, va_list ap)
 
 static void	initializer_struct(t_conv *param)
 {
-	param->conversion = FALSE;
 	param->hashtag = FALSE;
 	param->space = FALSE;
 	param->plus = FALSE;
 	param->zero = FALSE;
 	param->minus = FALSE;
-	param->precision = -1;
-	param->width = -1;
+	param->precision = FALSE;
+	param->width = FALSE;
 	param->len_str = 0;
 	param->str = NULL;
 }
