@@ -6,11 +6,12 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/22 18:17:17 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/22 23:15:14 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/23 00:17:48 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
+static void	negative_handler(t_conv *param);
 
 void	ft_precision(t_conv *param)
 {
@@ -25,19 +26,25 @@ void	ft_precision(t_conv *param)
 			free(tmp);
 		}
 	}
-	else if (param->str[0] == '-' && param->len_str--)
-	{
-		tmp = param->str;
-		param->str = ft_strdup(&(param->str[1]));
-		ft_flag_zero(param->conversion, param->precision,
-			&(param->len_str), &(param->str));
-		free(tmp);
-		tmp = param->str;
-		param->str = ft_strjoin("-", param->str);
-		free(tmp);
-	}
+	else if (param->str[0] == '-')
+		negative_handler(param);
 	else
 		ft_flag_zero(param->conversion, param->precision,
 			&(param->len_str), &(param->str));
 	param->len_str = ft_strlen(param->str);
+}
+
+static void	negative_handler(t_conv *param)
+{
+	char	*tmp;
+
+	param->len_str--;
+	tmp = param->str;
+	param->str = ft_strdup(&(param->str[1]));
+	ft_flag_zero(param->conversion, param->precision,
+			&(param->len_str), &(param->str));
+	free(tmp);
+	tmp = param->str;
+	param->str = ft_strjoin("-", param->str);
+	free(tmp);
 }
