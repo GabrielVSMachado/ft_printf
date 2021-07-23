@@ -38,5 +38,6 @@ void	ft_flag_plus(t_conv *param);
 void	ft_flag_zero(char c, int width, size_t *len_str, char **str);
 void	ft_flag_minus(t_conv *param);
 void	ft_precision(t_conv *param);
+void	ft_width(t_conv *param);
 
 #endif
