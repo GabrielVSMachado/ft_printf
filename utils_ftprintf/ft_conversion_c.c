@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/15 00:27:49 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/23 04:15:40 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/23 04:21:47 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_conversion_c(int c, t_conv *param)
 		if (param->minus == TRUE)
 			str[0] = (char)c;
 		else
-			str[len + 1] = (char)c;
+			str[len] = (char)c;
 		param->len_str = param->width;
 	}
 	else
