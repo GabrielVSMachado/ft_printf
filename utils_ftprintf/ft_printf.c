@@ -6,12 +6,11 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/18 17:09:13 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/20 13:01:00 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/23 14:51:55 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
-static void	ft_putstr2_fd(char *str, int fd);
 
 int	ft_printf(const char *format, ...)
 {
@@ -28,7 +27,7 @@ int	ft_printf(const char *format, ...)
 		{
 			conv_handler.conversion = *(++format_p);
 			get_conversion(&conv_handler, ap);
-			ft_putstr2_fd(conv_handler.str, 1);
+			write(1, conv_handler.str, conv_handler.len_str);
 			free(conv_handler.str);
 			format_p++;
 		}
@@ -40,10 +39,4 @@ int	ft_printf(const char *format, ...)
 		}
 	}
 	return (va_end(ap), conv_handler.len);
-}
-
-static void	ft_putstr2_fd(char *str, int fd)
-{
-	while (str && *str)
-		ft_putchar_fd(*str++, fd);
 }
