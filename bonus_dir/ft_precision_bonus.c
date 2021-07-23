@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/22 18:17:17 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/23 00:17:48 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/23 00:18:34 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static void	negative_handler(t_conv *param)
 	tmp = param->str;
 	param->str = ft_strdup(&(param->str[1]));
 	ft_flag_zero(param->conversion, param->precision,
-			&(param->len_str), &(param->str));
+		&(param->len_str), &(param->str));
 	free(tmp);
 	tmp = param->str;
 	param->str = ft_strjoin("-", param->str);
