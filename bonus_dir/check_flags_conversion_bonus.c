@@ -1,4 +1,3 @@
-
 #include "../ft_printf.h"
 static int	isflag(int c);
 static void	initializer_struct(t_conv *param);

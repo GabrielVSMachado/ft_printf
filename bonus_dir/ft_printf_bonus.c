@@ -6,8 +6,8 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/18 17:09:13 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/23 03:09:24 by gvitor-s         ###   ########.fr       */
-/*                                                                            */
+/*   Updated: 2021/07/23 04:16:36 by gvitor-s         ###   ########.fr       */
+/*                                                                           */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
@@ -27,7 +27,7 @@ int	ft_printf(const char *format, ...)
 		{
 			check_flags_conversion(&conv_handler, (&format_p));
 			get_conversion(&conv_handler, ap);
-			ft_putstr_fd(conv_handler.str, 1);
+			write(1, conv_handler.str, conv_handler.len_str);
 			free(conv_handler.str);
 			format_p++;
 		}
