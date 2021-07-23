@@ -25,7 +25,7 @@ FUNC_COMUM_LST = ft_conversion_c.c \
 				 ft_conversion_upper_x.c
 
 LIBFT = ./libft/libft.a
-CFLAGS = -g -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 CC = clang
 SRCDIR = ./utils_ftprintf
