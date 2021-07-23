@@ -6,7 +6,7 @@
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/22 18:17:17 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/23 00:18:34 by gvitor-s         ###   ########.fr       */
+/*   Updated: 2021/07/23 01:13:25 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,11 @@ void	ft_precision(t_conv *param)
 	}
 	else if (param->str[0] == '-')
 		negative_handler(param);
+	else if (param->precision == 0 && *param->str == '0')
+	{
+		free(param->str);
+		param->str = ft_strdup("");
+	}
 	else
 		ft_flag_zero(param->conversion, param->precision,
 			&(param->len_str), &(param->str));
