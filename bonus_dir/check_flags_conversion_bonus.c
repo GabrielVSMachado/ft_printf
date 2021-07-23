@@ -25,6 +25,7 @@ void	check_flags_conversion(t_conv *param, char **format_p)
 	param->width = get_number(format_p);
 	if (**format_p == '.')
 	{
+		param->zero = FALSE;
 		(*format_p)++;
 		param->precision = get_number(format_p);
 	}
