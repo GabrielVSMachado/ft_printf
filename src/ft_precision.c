@@ -10,7 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
+
 static void	negative_handler(t_conv *param);
 
 void	ft_precision(t_conv *param)

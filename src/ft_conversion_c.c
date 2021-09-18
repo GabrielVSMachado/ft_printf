@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_conversion_c.c                                  :+:      :+:    :+:   */
+/*   ft_conversion_c_new.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/15 00:27:49 by gvitor-s          #+#    #+#             */
-/*   Updated: 2021/07/23 04:21:47 by gvitor-s         ###   ########.fr       */
+/*   Created: 2021/09/18 16:13:54 by gvitor-s          #+#    #+#             */
+/*   Updated: 2021/09/18 16:13:54 by gvitor-s         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 char	*ft_conversion_c(int c, t_conv *param)
 {

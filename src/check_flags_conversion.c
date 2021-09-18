@@ -1,4 +1,17 @@
-#include "../ft_printf.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   check_flags_conversion_bonus.c                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gvitor-s <gvitor-s@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/09/18 16:18:14 by gvitor-s          #+#    #+#             */
+/*   Updated: 2021/09/18 16:18:14 by gvitor-s         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "ft_printf.h"
+
 static int	isflag(int c);
 static void	initializer_struct(t_conv *param);
 static int	get_number(char **format_p);

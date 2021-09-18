@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 void	get_conversion(t_conv *param, va_list ap)
 {
@@ -21,7 +21,7 @@ void	get_conversion(t_conv *param, va_list ap)
 	else if (param->conversion == 'x')
 		param->str = ft_conversion_x(va_arg(ap, unsigned int));
 	else if (param->conversion == 'X')
-		param->str = ft_conversion_X(va_arg(ap, unsigned int));
+		param->str = ft_conversion_upper_x(va_arg(ap, unsigned int));
 	else if (param->conversion == 's')
 		param->str = ft_conversion_s(va_arg(ap, char *));
 	else if (param->conversion == 'c')

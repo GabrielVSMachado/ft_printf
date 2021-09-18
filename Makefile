@@ -1,17 +1,17 @@
 .PHONY: all clean fclean re bonus
 NAME = libftprintf.a
 
-FUNC_LST = ft_flag_hashtag_bonus.c \
-				 ft_flag_space_bonus.c \
-				 get_conversion_bonus.c \
-				 get_flags_bonus.c \
-				 ft_flag_plus_bonus.c \
-				 ft_flag_zero_bonus.c \
-				 ft_flag_minus_bonus.c \
-				 ft_precision_bonus.c \
-				 ft_width_bonus.c \
-				 check_flags_conversion_bonus.c \
-				 ft_printf_bonus.c \
+FUNC_LST = ft_flag_hashtag.c \
+				 ft_flag_space.c \
+				 get_conversion.c \
+				 get_flags.c \
+				 ft_flag_plus.c \
+				 ft_flag_zero.c \
+				 ft_flag_minus.c \
+				 ft_precision.c \
+				 ft_width.c \
+				 check_flags_conversion.c \
+				 ft_printf.c \
 				 ft_conversion_c.c \
 				 ft_conversion_d_i.c \
 				 ft_conversion_p.c \
@@ -26,6 +26,7 @@ HEADERS = -I$(LIBFT_DIR) -I.
 CFLAGS = -Wall -Wextra -Werror -O3
 AR = ar rcs
 CC = gcc
+RM := rm -rf
 SRCDIR = ./src
 OBJ_DIR = obj
 SRCS = $(addprefix $(SRCDIR)/,$(FUNC_LST))

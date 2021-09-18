@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
-char	*ft_conversion_X(unsigned int x)
+char	*ft_conversion_upper_x(unsigned int x)
 {
 	char	*result;
 

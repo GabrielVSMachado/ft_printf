@@ -1,7 +1,5 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-# define TRUE 1
-# define FALSE -1
 
 # include <stdarg.h>
 # include "libft.h"
@@ -19,7 +17,7 @@ typedef struct s_conversion
 	int		plus;
 	int		zero;
 	int		minus;
-}				t_conv;
+}	t_conv;
 
 int		ft_printf(const char *format, ...);
 void	get_conversion(t_conv *param, va_list ap);
@@ -31,7 +29,7 @@ char	*ft_conversion_c(int c, t_conv *param);
 char	*ft_conversion_d_i(int d);
 char	*ft_conversion_u(unsigned int u);
 char	*ft_conversion_x(unsigned int x);
-char	*ft_conversion_X(unsigned int x);
+char	*ft_conversion_upper_x(unsigned int x);
 void	ft_flag_hashtag(t_conv *param);
 void	ft_flag_space(t_conv *param);
 void	ft_flag_plus(t_conv *param);
